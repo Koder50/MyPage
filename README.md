@@ -1,7 +1,7 @@
 # MyPage
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
-# Technologies
+## Technologies
 
 This project used: HTML,SCSS,Typescript, Angular Material
 
