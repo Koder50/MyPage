@@ -1,0 +1,219 @@
+$mainMarginBottom: 40px;
+$normalFontSize: 18px;
+
+$hMainColor: black;
+$mainPageColor: #3f51b5;
+
+$mainPaddingLeft: 80px;
+
+$slopeWidth: 740px;
+$ballWidth: 120px;
+$skiingWidth: 200px;
+$tennisWidth: 250px;
+$swimmingWidth: 305px;
+$windsurfingWidth: 350px;
+$cyclingWidth: 300px;
+$basketballWidth: 150px;
+$volleyballWidth: 124px;
+
+@mixin mainPaddingLeft {
+    padding-left: $mainPaddingLeft;
+}
+@mixin mainPageColor {
+    color: $mainPageColor;
+}
+@mixin mainPaddingLeftAndPageColor {
+    @include mainPageColor;
+    @include mainPaddingLeft;
+}
+
+h1 {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    color: $hMainColor;
+    border: 0px;
+    margin-top: 20px;
+    margin-bottom: $mainMarginBottom;
+}
+
+.content__icon--space {
+    margin-right: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: left;
+    margin-left: 40px;
+    color: $hMainColor;
+    border: 0px;
+    margin-top: 40px;
+    margin-bottom: $mainMarginBottom;
+    width: 100%;
+    display: block;
+}
+
+p {
+    line-height: 24px;
+    font-size: $normalFontSize;
+    @include mainPaddingLeftAndPageColor;
+    color: $hMainColor;
+    padding-top: 40px;
+}
+
+.isVisible,.isVisibleBlue {
+    transition: color 5s ease-out;
+    will-change: color;
+}
+
+.isVisible {
+    opacity: 1;
+    color: $hMainColor;
+}
+
+.isVisibleBlue {
+    color: $mainPageColor;
+}
+
+.fadeInSection {
+    color: white;
+    opacity: 0;
+}
+
+.content__ball,.isVisibleBall {
+    width: $ballWidth;
+    height: 120px;
+    margin: 20px calc((100% - $ballWidth) /2) 20px calc((100% - $ballWidth) /2) ;
+}
+
+.content__ball, .content__stadium,.content__skiing, .content__slope,.content__tennis,.content__court,
+.content__swimmming,.content__pool,.content__windsurfing,.content__sea,.content__cycling,.content__race,
+.content__basketball,.content__arena,.content__volleyball,.content__volleyballArena,.content__chess,
+.content__chessBoard{
+    opacity: 0;
+}
+
+.content__stadium,.isVisibleStadium {
+    height: auto;
+    margin: 20px 110px 20px 110px;
+        
+}    
+
+.content__skiing,.isVisibleSkiing {
+    width: $skiingWidth;
+    height: 300px;
+    margin: 20px calc((100% - $skiingWidth) /2) 20px calc((100% - $skiingWidth) /2);
+}
+
+.content__slope,.content__court,.content__pool,.content__sea,.content__race,.content__arena,.content__volleyballArena,.content__chessBoard,
+.isVisibleSlope,.isVisibleCourt,.isVisiblePool,.isVisibleSea,.isVisibleRace,.isVisibleArena,.isVisibleVolleyballArena,.isVisibleChessBoard{
+    width: $slopeWidth;
+    margin: 20px 110px 20px 110px;
+}
+
+.content__tennis,.isVisibleTennis {
+    width: $tennisWidth;
+    height: 125px;
+    margin: 20px calc((100% - $tennisWidth) /2) 20px calc((100% - $tennisWidth) /2);
+}
+
+.content__swimmming,.isVisibleSwimming {
+    width: $swimmingWidth;
+    height: 200px;
+    margin: 20px calc((100% - $swimmingWidth) /2) 20px calc((100% - $swimmingWidth) /2);
+}
+
+.content__windsurfing,.isVisibleWindsurfing {
+    width: $windsurfingWidth;
+    height: 232px;
+    margin: 20px calc((100% - $windsurfingWidth) /2) 20px calc((100% - $windsurfingWidth) /2);
+}
+
+.content__cycling,.isVisibleCycling {
+    width: $cyclingWidth;
+    height: 199px;
+    margin: 20px calc((100% - $cyclingWidth) /2) 20px calc((100% - $cyclingWidth) /2);
+
+}
+
+.content__basketball,.isVisibleBasketball {
+    width: $basketballWidth;
+    height: 201px;
+    margin: 20px calc((100% - $basketballWidth) /2) 20px calc((100% - $basketballWidth) /2);
+}
+
+.content__volleyball,.content__chess,.isVisibleVolleyball,.isVisibleChess {
+    width: $volleyballWidth;
+    height: 119px;
+    margin: 20px calc((100% - $volleyballWidth) /2) 20px calc((100% - $volleyballWidth) /2);
+}
+
+.isVisibleBall,.isVisibleStadium,.isVisibleSkiing,.isVisibleSlope,.isVisibleCourt,.isVisiblePool, 
+.isVisibleTennis, .isVisibleSwimming,.isVisibleWindsurfing,.isVisibleSea,.isVisibleCycling,.isVisibleRace,
+.isVisibleBasketball,.isVisibleArena,.isVisibleVolleyball,.isVisibleVolleyballArena,.isVisibleChess,
+.isVisibleChessBoard {
+    opacity: 1;
+    transition: opacity 5s ease-out;
+    will-change: opacity;
+}
+
+
+.list {   
+
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+
+}
+
+a:hover{
+    color: #28a745 !important;
+}
+
+a.list__link--styles{
+            
+    color: $hMainColor;
+    text-decoration: none;
+    
+}  
+
+.mat-mdc-list-item {
+    width: 150px;
+}
+
+@media screen and (max-width: 959px) and (min-width: 600px) {
+    .content__stadium,.isVisibleStadium {
+        width: calc( 100% - 220px );
+        height: calc(( 100% - 220px ) / 2.17);
+        margin: 20px 110px 20px 110px;
+        overflow: hidden;
+    }   
+
+    .content__slope,.content__court,.content__pool,.content__sea,.content__race,.content__arena,.content__volleyballArena,.content__chessBoard,
+    .isVisibleSlope,.isVisibleCourt,.isVisiblePool,.isVisibleSea,.isVisibleRace,.isVisibleArena,.isVisibleVolleyballArena,.isVisibleChessBoard{
+        width: calc( 100% - 220px );
+        margin: 20px 110px 20px 110px;
+        overflow: hidden;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .content__stadium,.isVisibleStadium {
+        width: 380px;
+        height: auto;
+        margin: 20px 110px 20px 110px;
+        overflow: hidden;
+     
+    }
+
+    .content__slope,.content__court,.content__pool,.content__sea,.content__race,.content__arena,.content__volleyballArena,.content__chessBoard,
+    .isVisibleSlope,.isVisibleCourt,.isVisiblePool,.isVisibleSea,.isVisibleRace,.isVisibleArena,.isVisibleVolleyballArena,.isVisibleChessBoard{
+        width: 380px;
+        margin: 20px 110px 20px 110px;
+        overflow: hidden;
+    }
+}

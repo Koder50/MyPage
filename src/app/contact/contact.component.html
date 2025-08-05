@@ -1,0 +1,23 @@
+<div class="content" id="content" style="overflow: hidden;">
+    <h1 inViewport (inViewportAction)="checkElementOnView0($event)" [ngClass]="{fadeInSection: !this.isVisible[0], isVisible: this.isVisible[0]}">Kontakt</h1>
+
+    <table mat-table [dataSource]="dataSource" class="tablePersonalData" inViewport (inViewportAction)="checkElementOnView0($event)" [ngClass]="{fadeInSection: !this.isVisible[0], isVisible: this.isVisible[0]}">
+      
+        <ng-container matColumnDef="definition">
+          <th mat-header-cell *matHeaderCellDef class="tablePersonalData__tableCell tablePersonalData__tableCell--styles">Rodzaj danych</th>
+          <td mat-cell *matCellDef="let element" class="tablePersonalData__tableCell tablePersonalData__tableCell--styles">{{element.definition}}</td>
+        </ng-container>
+        
+        <ng-container matColumnDef="value">
+          <th mat-header-cell *matHeaderCellDef class="tablePersonalData__tableCell tablePersonalData__tableCell--styles">Dane</th>
+    
+          <td mat-cell *matCellDef="let element" class="tablePersonalData__tableCell tablePersonalData__tableCell--styles">
+            <ng-container *ngIf="element.value=='kgoralczyk@gmail.com'"><strong><a href="mailto:kgoralczyk@gmail.com" style="text-decoration: none">{{element.value}}</a></strong></ng-container>
+            <ng-container *ngIf="element.value!='kgoralczyk@gmail.com'"><strong>{{element.value}}</strong></ng-container>
+          </td>
+        </ng-container>
+        
+        <tr mat-header-row *matHeaderRowDef="displayedColumns" class="tablePersonalData__tableRow tablePersonalData__tableRow--styles"></tr>
+        <tr mat-row *matRowDef="let row; let even = even; columns: displayedColumns;" [ngClass]="{even: even}" class="tablePersonalData__tableRow tablePersonalData__tableRow--styles"></tr>
+      </table>
+</div>

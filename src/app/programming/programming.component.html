@@ -1,0 +1,101 @@
+<div class="content" style="overflow: hidden;">
+
+  <h1 inViewport (inViewportAction)="checkElementOnViewFunctional($event,0)" [ngClass]="{fadeInSection: !this.isVisibleFunctional[0], isVisible: this.isVisibleFunctional[0]}">Programowanie</h1>
+
+  <h2 inViewport (inViewportAction)="checkElementOnViewFunctional($event,0)" [ngClass]="{fadeInSection: !this.isVisibleFunctional[0], isVisible: this.isVisibleFunctional[0]}">Funkcyjne</h2>
+
+  <mat-list class="functionalList">
+    <mat-list-item class="functionalList__item" inViewport (inViewportAction)="checkElementOnViewFunctional($event,0)" [ngClass]="{fadeInSection: !this.isVisibleFunctional[0], isVisible: this.isVisibleFunctional[0]}">
+      <mat-icon matListItemIcon class="functionalList__icon">check_circle</mat-icon>
+      Zadania rozwiązywane na <a href="https://pl.spoj.com" style="text-decoration: none"><strong>spoju</strong></a> w C++, obecnie 256 zaakceptowanych na poziomie łatwym ( jako <a href="https://pl.spoj.com/users/koder123/"  style="text-decoration: none"><strong>Adam Kowalski vel Karol Góralczyk</strong></a> , w tym ) :
+    </mat-list-item>
+    <mat-list class="functionalList functionalList_functionalList">
+        <div *ngFor="let task of tasksFunctional;let i=index;" inViewport (inViewportAction)="checkElementOnViewFunctional($event,i)" [ngClass]="{fadeInSection: !this.isVisibleFunctional[i], isVisible: this.isVisibleFunctional[i]}">
+            <mat-list-item  *ngFor="let subtask of task;" class="functionalList__item"><mat-icon matListItemIcon class="functionalList__icon">check_circle_outline</mat-icon>{{subtask}}</mat-list-item>
+        </div>
+    </mat-list>
+    <mat-list-item class="functionalList__item" inViewport (inViewportAction)="checkElementOnViewFunctional($event,17)" [ngClass]="{fadeInSection: !this.isVisibleFunctional[17], isVisible: this.isVisibleFunctional[17]}">
+        <mat-icon matListItemIcon class="functionalList__icon">check_circle</mat-icon>
+        Pozostałe zadania:
+     </mat-list-item>
+     <mat-list class="functionalList functionalList_functionalList">
+        <div *ngFor="let otherTask of otherTasksFunctional;let i=index;" inViewport (inViewportAction)="checkElementOnViewFunctional($event,i+17)" [ngClass]="{fadeInSection: !this.isVisibleFunctional[i+17], isVisible: this.isVisibleFunctional[i+17]}">
+            <mat-list-item  *ngFor="let otherSubtask of otherTask;" class="functionalList__item"><mat-icon matListItemIcon class="functionalList__icon">check_circle_outline</mat-icon>{{otherSubtask}}</mat-list-item>
+        </div>
+    </mat-list>
+  </mat-list>
+
+  <h2 inViewport (inViewportAction)="checkElementOnViewObjective($event,0)" [ngClass]="{fadeInSection: !this.isVisibleObjective[0], isVisible: this.isVisibleObjective[0]}">Obiektowe</h2>
+
+  <mat-list class="objectiveList">
+    <mat-list-item class="objectiveList__item" inViewport (inViewportAction)="checkElementOnViewObjective($event,0)" [ngClass]="{fadeInSection: !this.isVisibleObjective[0], isVisible: this.isVisibleObjective[0]}">
+        <mat-icon matListItemIcon class="objectiveList__icon">check_circle</mat-icon>
+        Zadania rozwiązywane na <a href="https://zadania24h.wordpress.com/2019/01/19/programowanie-obiektowe-w-jezyku-c-zadania/" style="text-decoration: none"><strong>stronie</strong></a> w C++, w tym :
+    </mat-list-item>
+    <mat-list class="objectiveList objectiveList_objectiveList">
+        <div *ngFor="let task of tasksObjective;let i=index;" inViewport (inViewportAction)="checkElementOnViewObjective($event,i)" [ngClass]="{fadeInSection: !this.isVisibleObjective[i], isVisible: this.isVisibleObjective[i]}">
+            <mat-list-item  *ngFor="let subtask of task;" class="objectiveList__item"><mat-icon matListItemIcon class="objectiveList__icon">check_circle_outline</mat-icon>{{subtask}}</mat-list-item>
+        </div>
+    </mat-list>
+    <mat-list-item class="objectiveList__item" inViewport (inViewportAction)="checkElementOnViewObjective($event,1)" [ngClass]="{fadeInSection: !this.isVisibleObjective[1], isVisible: this.isVisibleObjective[1]}">
+        <mat-icon matListItemIcon class="objectiveList__icon">check_circle</mat-icon>
+        Zadania rozwiązywane na <a href="http://www.cs.put.poznan.pl/anstroinski/data/uploads/mipo/materials/mipo-programowanie-obiektowe-w-c-zadania.pdf" style="text-decoration: none"><strong>stronie</strong></a> w C++, w tym :
+    </mat-list-item>
+    <mat-list class="objectiveList objectiveList_objectiveList">
+        <div *ngFor="let otherTask of otherTasksObjective;let i=index;" inViewport (inViewportAction)="checkElementOnViewObjective($event,1)" [ngClass]="{fadeInSection: !this.isVisibleObjective[1], isVisible: this.isVisibleObjective[1]}">
+            <mat-list-item  *ngFor="let otherSubtask of otherTask;" class="objectiveList__item"><mat-icon matListItemIcon class="objectiveList__icon">check_circle_outline</mat-icon>{{otherSubtask}}</mat-list-item>
+        </div>
+    </mat-list>
+  </mat-list>
+
+  <h2 inViewport (inViewportAction)="checkElementOnViewPages($event,0)" [ngClass]="{fadeInSection: !this.isVisiblePages[0], isVisible: this.isVisiblePages[0]}">Stron</h2>
+
+  <mat-list class="pagesList">
+    <mat-list-item class="pagesList__item" inViewport (inViewportAction)="checkElementOnViewPages($event,0)" [ngClass]="{fadeInSection: !this.isVisiblePages[0], isVisible: this.isVisiblePages[0]}">
+        <mat-icon matListItemIcon class="pagesList__icon">check_circle</mat-icon>
+        HTML i CSS - wiedza z <a href="https://helion.pl/ksiazki/html-i-css-zaprojektuj-i-zbuduj-witryne-www-podrecznik-front-end-developera-jon-duckett,htcswv.htm#format/d" style="text-decoration: none"><strong>książki</strong></a>:
+    </mat-list-item>
+    <mat-list class="pagesList pagesList_pagesList">
+        <div *ngFor="let task of tasksPages;let i=index;" inViewport (inViewportAction)="checkElementOnViewPages($event,i)" [ngClass]="{fadeInSection: !this.isVisiblePages[i], isVisible: this.isVisiblePages[i]}">
+            <mat-list-item  *ngFor="let subtask of task;" class="pagesList__item"><mat-icon matListItemIcon class="pagesList__icon">check_circle_outline</mat-icon>{{subtask}}</mat-list-item>
+        </div>
+    </mat-list>
+    <mat-list-item class="pagesList__item" inViewport (inViewportAction)="checkElementOnViewJavascript($event,0)" [ngClass]="{fadeInSection: !this.isVisibleJavascript[0], isVisible: this.isVisibleJavascript[0]}">
+        <mat-icon matListItemIcon class="pagesList__icon">check_circle</mat-icon>
+        JavaScript - wiedza z <a href="https://helion.pl/ksiazki/javascript-i-jquery-interaktywne-strony-www-dla-kazdego-podrecznik-front-end-developera-jon-duckett,jsqwdv.htm#format/d" style="text-decoration: none"><strong>książki</strong></a>:
+    </mat-list-item>
+    <mat-list class="pagesList pagesList_pagesList">
+        <div *ngFor="let task of tasksJavascript;let i=index;" inViewport (inViewportAction)="checkElementOnViewJavascript($event,i)" [ngClass]="{fadeInSection: !this.isVisibleJavascript[i], isVisible: this.isVisibleJavascript[i]}">
+            <mat-list-item  *ngFor="let subtask of task;" class="pagesList__item"><mat-icon matListItemIcon class="pagesList__icon">check_circle_outline</mat-icon>{{subtask}}</mat-list-item>
+        </div>
+    </mat-list>
+    <mat-list-item class="pagesList__item" inViewport (inViewportAction)="checkElementOnViewJquery($event,0)" [ngClass]="{fadeInSection: !this.isVisibleJquery[0], isVisible: this.isVisibleJquery[0]}">
+        <mat-icon matListItemIcon class="pagesList__icon">check_circle</mat-icon>
+        Jquery - wiedza z <a href="https://helion.pl/ksiazki/javascript-i-jquery-interaktywne-strony-www-dla-kazdego-podrecznik-front-end-developera-jon-duckett,jsqwdv.htm#format/d" style="text-decoration: none"><strong>książki</strong></a>:
+    </mat-list-item>
+    <mat-list class="pagesList pagesList_pagesList">
+        <div *ngFor="let task of tasksJquery;let i=index;" inViewport (inViewportAction)="checkElementOnViewJquery($event,i)" [ngClass]="{fadeInSection: !this.isVisibleJquery[i], isVisible: this.isVisibleJquery[i]}">
+            <mat-list-item  *ngFor="let subtask of task;" class="pagesList__item"><mat-icon matListItemIcon class="pagesList__icon">check_circle_outline</mat-icon>{{subtask}}</mat-list-item>
+        </div>
+    </mat-list>
+    <mat-list-item class="pagesList__item" inViewport (inViewportAction)="checkElementOnViewJquery($event,0)" [ngClass]="{fadeInSection: !this.isVisibleJquery[0], isVisible: this.isVisibleJquery[0]}">
+        <mat-icon matListItemIcon class="pagesList__icon">check_circle</mat-icon>
+        Angular - wiedza z <a href="https://helion.pl/ksiazki/angular-profesjonalne-techniki-programowania-wydanie-iv-adam-freeman,angup4.htm#format/d" style="text-decoration: none"><strong>książki</strong></a>:
+    </mat-list-item>
+    <mat-list class="pagesList pagesList_pagesList">
+        <div *ngFor="let task of tasksAngular;let i=index;" inViewport (inViewportAction)="checkElementOnViewAngular($event,i)" [ngClass]="{fadeInSection: !this.isVisibleAngular[i], isVisible: this.isVisibleAngular[i]}">
+            <mat-list-item  *ngFor="let subtask of task;" class="pagesList__item"><mat-icon matListItemIcon class="pagesList__icon">check_circle_outline</mat-icon>{{subtask}}</mat-list-item>
+        </div>
+    </mat-list>
+    <mat-list-item class="pagesList__item" inViewport (inViewportAction)="checkElementOnViewJob($event,0)" [ngClass]="{fadeInSection: !this.isVisibleJob[0], isVisible: this.isVisibleJob[0]}">
+        <mat-icon matListItemIcon class="pagesList__icon">check_circle</mat-icon>
+        Praca w firmie <a href="https://ekoncept.pl" style="text-decoration: none"><strong>Ekoncept</strong></a>:    
+    </mat-list-item>
+    <mat-list class="pagesList pagesList_pagesList">
+        <div *ngFor="let task of tasksJob;let i=index;" inViewport (inViewportAction)="checkElementOnViewJob($event,i)" [ngClass]="{fadeInSection: !this.isVisibleJob[i], isVisible: this.isVisibleJob[i]}">
+            <mat-list-item  *ngFor="let subtask of task;" class="pagesList__item"><mat-icon matListItemIcon class="pagesList__icon">check_circle_outline</mat-icon>{{subtask}}</mat-list-item>
+        </div>
+    </mat-list>
+  </mat-list>
+
+</div>

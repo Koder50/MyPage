@@ -1,0 +1,66 @@
+$mainMarginBottom: 40px;
+$mainPageColor: #3f51b5 !important;
+$hMainColor: black;
+$mainPaddingLeft: 80px;
+$normalFontSize: 18px;
+@mixin mainPaddingLeftAndPageColor {
+    @include mainPageColor;
+    @include mainPaddingLeft;
+}
+@mixin mainPaddingLeft {
+    padding-left: $mainPaddingLeft;
+}
+@mixin mainPageColor {
+    color: $mainPageColor;
+}
+
+h1 {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    color: $hMainColor;
+    border: 0px;
+    margin-top: 20px;
+    margin-bottom: $mainMarginBottom;
+}
+
+.tablePersonalData {
+    @include mainPaddingLeftAndPageColor;
+    margin-bottom: $mainMarginBottom;
+
+    .tablePersonalData__tableCell--styles,.tablePersonalData__tableRow--styles {
+        @include mainPageColor;
+        font-size: $normalFontSize;
+        border-bottom: 1px solid $mainPageColor;
+    }
+    
+}
+
+.isVisible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fadeInSection {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: visible;
+}
+
+p {
+    @include mainPaddingLeftAndPageColor;
+    line-height: 24px;
+    font-size: $normalFontSize;
+}
+
+.even { 
+    background-color: ghostwhite; 
+};
+
+tr.mat-mdc-row:hover {
+    background-color: lightgrey;
+}

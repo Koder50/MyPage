@@ -1,0 +1,155 @@
+<div class="content" id="content" style="overflow: hidden;">
+    <h1 inViewport (inViewportAction)="checkElementOnViewTravels($event,0)" [ngClass]="{fadeInSection: !this.isVisibleTravels[0], isVisible: this.isVisibleTravels[0]}">{{travels[0][0]}}</h1>
+    <p inViewport (inViewportAction)="checkElementOnViewTravels($event,0)" [ngClass]="{fadeInSection: !this.isVisibleTravels[0], isVisible: this.isVisibleTravels[0]}" style="margin-left: -40px">{{travels[0][1]}}
+
+    <mat-list role="list" class="list">
+        <mat-list-item role="listitem" class="list__listItem" inViewport (inViewportAction)="checkElementOnViewPlaces($event,0)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[0], isVisible: this.isVisiblePlaces[0]}"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">Europa</label></mat-list-item>
+        <mat-list role="list" class="list__list">
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,0)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[0], isVisible: this.isVisiblePlaces[0]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Polska:</label></mat-list-item>
+            <mat-list role="list" class="list__list">    
+                <div class="list__listWrapper" *ngFor="let places of placesPoland;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,0)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[0], isVisibleBlue: this.isVisiblePlaces[0]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,1)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[1], isVisible: this.isVisiblePlaces[1]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Litwa:</label></mat-list-item>
+            <mat-list role="list" class="list__list"> 
+                <div class="list__listWrapper" *ngFor="let places of placesLithuania;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,1)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[1], isVisibleBlue: this.isVisiblePlaces[1]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,2)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[2], isVisible: this.isVisiblePlaces[2]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Białoruś:</label></mat-list-item>
+            <mat-list role="list" class="list__list"> 
+                <div class="list__listWrapper" *ngFor="let places of placesBelarus;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,2)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[2], isVisibleBlue: this.isVisiblePlaces[2]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,3)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[3], isVisible: this.isVisiblePlaces[3]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Słowacja:</label></mat-list-item>
+            <mat-list role="list" class="list__list"> 
+                <div class="list__listWrapper" *ngFor="let places of placesSlovakia;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,3)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[3], isVisibleBlue: this.isVisiblePlaces[3]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,4)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[4], isVisible: this.isVisiblePlaces[4]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Niemcy:</label></mat-list-item>
+            <mat-list role="list" class="list__list"> 
+                <div class="list__listWrapper" *ngFor="let places of placesGermany;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,4)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[4], isVisibleBlue: this.isVisiblePlaces[4]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,5)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[5], isVisible: this.isVisiblePlaces[5]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Dania:</label></mat-list-item>
+            <mat-list role="list" class="list__list"> 
+                <div class="list__listWrapper" *ngFor="let places of placesDenmark;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,5)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[5], isVisibleBlue: this.isVisiblePlaces[5]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,6)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[6], isVisible: this.isVisiblePlaces[6]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Holandia:</label></mat-list-item>
+            <mat-list role="list" class="list__list"> 
+                <div class="list__listWrapper" *ngFor="let places of placesNetherlands;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,6)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[6], isVisibleBlue: this.isVisiblePlaces[6]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,7)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[7], isVisible: this.isVisiblePlaces[7]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Wielka Brytania:</label></mat-list-item>
+            <mat-list role="list" class="list__list"> 
+                <div class="list__listWrapper" *ngFor="let places of placesGreatBritain;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,7)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[7], isVisibleBlue: this.isVisiblePlaces[7]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,8)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[8], isVisible: this.isVisiblePlaces[8]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Francja:</label></mat-list-item>
+            <mat-list role="list" class="list__list"> 
+                <div class="list__listWrapper" *ngFor="let places of placesFrance;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,8)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[8], isVisibleBlue: this.isVisiblePlaces[8]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,9)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[9], isVisible: this.isVisiblePlaces[9]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Hiszpania:</label></mat-list-item>
+            <mat-list role="list" class="list__list"> 
+                <div class="list__listWrapper" *ngFor="let places of placesSpain;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,9)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[9], isVisibleBlue: this.isVisiblePlaces[9]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,10)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[10], isVisible: this.isVisiblePlaces[10]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Włochy:</label></mat-list-item>
+            <mat-list role="list" class="list__list"> 
+                <div class="list__listWrapper" *ngFor="let places of placesItaly;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,10)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[10], isVisibleBlue: this.isVisiblePlaces[10]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,11)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[11], isVisible: this.isVisiblePlaces[11]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Grecja:</label></mat-list-item>
+            <mat-list role="list" class="list__list"> 
+                <div class="list__listWrapper" *ngFor="let places of placesGreece;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,11)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[11], isVisibleBlue: this.isVisiblePlaces[11]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,12)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[12], isVisible: this.isVisiblePlaces[12]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Cypr:</label></mat-list-item>
+            <mat-list role="list" class="list__list"> 
+                <div class="list__listWrapper" *ngFor="let places of placesCyprus;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,12)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[12], isVisibleBlue: this.isVisiblePlaces[12]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+        </mat-list>
+        <mat-list-item role="listitem" class="list__listItem" inViewport (inViewportAction)="checkElementOnViewPlaces($event,13)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[13], isVisible: this.isVisiblePlaces[13]}"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">Afryka</label></mat-list-item>
+        <mat-list role="list" class="list__list">
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,13)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[13], isVisible: this.isVisiblePlaces[13]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Maroko:</label></mat-list-item>
+            <mat-list role="list" class="list__list">    
+                <div class="list__listWrapper" *ngFor="let places of placesMorrocco;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,13)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[13], isVisibleBlue: this.isVisiblePlaces[13]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+        </mat-list>   
+        <mat-list-item role="listitem" class="list__listItem" inViewport (inViewportAction)="checkElementOnViewPlaces($event,14)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[14], isVisible: this.isVisiblePlaces[14]}"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">Azja</label></mat-list-item>
+        <mat-list role="list" class="list__list">
+            <mat-list-item role="listitem" class="list__listItem list__listItem--styles" inViewport (inViewportAction)="checkElementOnViewPlaces($event,14)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[14], isVisible: this.isVisiblePlaces[14]}"><mat-icon class="list__icon">check_circle_outline</mat-icon><label class="list__label">Turcja:</label></mat-list-item>
+            <mat-list role="list" class="list__list">    
+                <div class="list__listWrapper" *ngFor="let places of placesTurkey;" inViewport (inViewportAction)="checkElementOnViewPlaces($event,14)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[14], isVisibleBlue: this.isVisiblePlaces[14]}">
+                    <mat-list-item  *ngFor="let place of places;" role="listitem" class="list__listItem list__listItem--stylesCity"><mat-icon class="list__icon">check_circle</mat-icon><label class="list__label">{{places}}</label></mat-list-item>
+                </div>
+            </mat-list>
+        </mat-list>   
+    </mat-list>
+    <iframe class="content__map" src="https://umap.openstreetmap.fr/en/map/anonymous-edit/969368:hfNnFA9NkhFkodXoDMQlOAR4pWQXqV0aNMYtJi7ZNQw" inViewport (inViewportAction)="checkElementOnViewPlaces($event,15)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[15], isVisibleBlue: this.isVisiblePlaces[15]}"></iframe> 
+    <!--wejście na stronę mapy do edycji: https://umap.openstreetmap.fr/en/map/untitled-map_969368#4/46.97/-1.23-->      
+    <label class="content__label" inViewport (inViewportAction)="checkElementOnViewPlaces($event,15)" [ngClass]="{fadeInSection: !this.isVisiblePlaces[15], isVisibleBlue: this.isVisiblePlaces[15]}">Moje podróże</label>
+    
+    <p inViewport (inViewportAction)="checkElementOnViewTravels($event,0)" [ngClass]="{fadeInSection: !this.isVisibleGallery[0], isVisible: this.isVisibleGallery[0]}" style="margin-left: -40px; margin-bottom: 40px;">{{travels[0][2]}}
+
+    <h1 inViewport (inViewportAction)="checkElementOnViewGallery($event,0)" [ngClass]="{fadeInSection: !this.isVisibleGallery[0], isVisible: this.isVisibleGallery[0]}">Galeria Kos</h1>
+
+    <table mat-table [dataSource]="dataSource">
+
+      
+        <!-- Photo1 Column -->
+        <ng-container matColumnDef="photo1">
+          <th mat-header-cell *matHeaderCellDef [style.display]="'none'">photo1</th>
+          <td mat-cell *matCellDef="let element" [innerHtml]="element.photo1"></td>
+        </ng-container>
+      
+        <!-- Photo2 Column -->
+        <ng-container matColumnDef="photo2">
+          <th mat-header-cell *matHeaderCellDef [style.display]="'none'">photo2</th>
+          <td mat-cell *matCellDef="let element" [innerHtml]="element.photo2"></td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns; let i=index" inViewport (inViewportAction)="checkElementOnViewGallery($event,i+1)" [ngClass]="{fadeInSection: !this.isVisibleGallery[i+1], isVisible: this.isVisibleGallery[i+1], center: true}"></tr>
+    </table>
+
+    <h1 inViewport (inViewportAction)="checkElementOnViewGallery($event,5)" [ngClass]="{fadeInSection: !this.isVisibleGallery[5], isVisible: this.isVisibleGallery[5]}">Galeria Maroko</h1>
+
+    <table mat-table [dataSource]="dataSourceMorrocco">
+
+      
+        <!-- Photo1 Column -->
+        <ng-container matColumnDef="photo1">
+          <th mat-header-cell *matHeaderCellDef [style.display]="'none'">photo1</th>
+          <td mat-cell *matCellDef="let element" [innerHtml]="element.photo1"></td>
+        </ng-container>
+      
+        <!-- Photo2 Column -->
+        <ng-container matColumnDef="photo2">
+          <th mat-header-cell *matHeaderCellDef [style.display]="'none'">photo2</th>
+          <td mat-cell *matCellDef="let element; let i=index" [innerHtml]="element.photo2"></td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsMorrocco; let i=index" inViewport (inViewportAction)="checkElementOnViewGallery($event,i+5)" [ngClass]="{fadeInSection: !this.isVisibleGallery[i+5], isVisible: this.isVisibleGallery[i+5], center: true}"></tr>
+      </table>
+
+      
+</div>

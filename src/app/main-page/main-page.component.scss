@@ -1,0 +1,225 @@
+$mainPageColor: #3f51b5 !important;
+$hMainColor: black;
+$mainPaddingLeft: 80px;
+@mixin mainPaddingLeftAndPageColor {
+    @include mainPageColor;
+    @include mainPaddingLeft;
+}
+@mixin mainPaddingLeft {
+    padding-left: $mainPaddingLeft;
+}
+@mixin mainPageColor {
+    color: $mainPageColor;
+}
+@mixin sizes {
+    font-size: 16px;  
+    line-height: 30px;
+}
+@mixin mainPageColorAndSizes {
+    @include mainPageColor;
+    @include sizes;
+}
+$normalFontSize: 18px;
+$mainMarginBottom: 40px;
+$normalReduceMargin: -20px;
+$itemLineReduceMargin: -5px;
+$standardWidth: 960px;
+$standardWidthMinusPadding: 880px;
+$standardWidthMinusPaddingAndIcon: 808px;
+@mixin responsiveMiddleWidth {
+    min-width: 500px;
+    max-width: 879px;
+}
+@mixin responsiveMiddleWidthRight {
+    min-width: 428px;
+    max-width: 807px;
+}
+$minWidth: 400px !important;
+
+@mixin itemLinesBreakLine {
+    white-space: break-spaces !important;
+    line-height: 20px !important;
+}
+
+h1 {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    color: $hMainColor;
+    border: 0px;
+    margin-top: 20px;
+    margin-bottom: $mainMarginBottom;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: left;
+    margin-left: 40px;
+    color: $hMainColor;
+    border: 0px;
+    margin-top: 40px;
+    margin-bottom: $mainMarginBottom;
+}
+
+.tablePersonalData {
+    @include mainPaddingLeftAndPageColor;
+
+    .tablePersonalData__tableCell--styles,.tablePersonalData__tableRow--styles {
+        @include mainPageColor;
+        font-size: $normalFontSize;
+        border-bottom: 1px solid $mainPageColor;
+    }
+    
+}
+
+.skillsList,.experienceList,.otherAdvantagesList,.interestsList {
+    @include mainPaddingLeftAndPageColor;
+    
+    .skillsList__skillsList,.experienceList__experienceList,.otherAdvantagesList__otherAdvantagesList,.interestsList__interestsList {
+        @include mainPaddingLeftAndPageColor;
+    }
+
+    .skillsList__itemLine--first,.experienceList__itemLine--first,.otherAdvantagesList__itemLine--first,.interestsList__itemLine--first{
+        @include mainPageColorAndSizes;
+        margin-top: $normalReduceMargin;
+    }
+
+    .skillsList__itemLine--notFirst,.experienceList__itemLine--notFirst,.otherAdvantagesList__itemLine--notFirst,.interestsList__itemLine--notFirst {
+        @include mainPageColorAndSizes;
+    }
+
+    .skillsList__item--first,.experienceList__item--first,.otherAdvantagesList__item--first,.interestsList__item--first {
+      margin-top: $normalReduceMargin;
+    }
+}
+
+p {
+    @include mainPaddingLeftAndPageColor;
+    line-height: 24px;
+    font-size: $normalFontSize;
+}
+
+.even { 
+    background-color: ghostwhite; 
+};
+
+tr.mat-mdc-row:hover {
+    background-color: lightgrey;
+}
+
+.mdc-list-item--with-leading-icon .mdc-list-item__start {
+    @include mainPageColor;
+}
+
+:host ::ng-deep .mdc-list-item__primary-text {
+    --mdc-list-list-item-label-text-color: $mainPageColor;
+}
+    
+.isVisible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fadeInSection {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: visible;
+}
+
+@media screen and (min-width: 960px) {
+    .skillsList,.experienceList,.otherAdvantagesList,.interestsList {
+        width: $standardWidthMinusPadding;
+        .skillsList__skillsList,.experienceList__experienceList,.otherAdvantagesList__otherAdvantagesList,.interestsList__interestsList {
+            width: $standardWidthMinusPaddingAndIcon;
+        }
+
+        .skillsList__item {
+            width: $standardWidthMinusPadding;
+        } 
+    
+        .skillsList__item--notMain {
+            width: $standardWidthMinusPaddingAndIcon;
+        } 
+    
+        .skillsList__itemLine--first,.experienceList__itemLine--first,.otherAdvantagesList__itemLine--first,.interestsList__itemLine--first{
+            width: $standardWidthMinusPaddingAndIcon;
+        }
+    
+        .skillsList__itemLine--notFirst,.experienceList__itemLine--notFirst,.otherAdvantagesList__itemLine--notFirst,.interestsList__itemLine--notFirst {
+            width: $standardWidthMinusPaddingAndIcon;
+        }
+    
+        .skillsList__item--first,.experienceList__item--first,.otherAdvantagesList__item--first,.interestsList__item--first {
+            width: $standardWidthMinusPaddingAndIcon;
+        }
+    }
+}
+
+@media screen and (max-width: 959px) and (min-width: 600px) {
+    .skillsList,.experienceList,.otherAdvantagesList,.interestsList {
+        @include responsiveMiddleWidth;
+        .skillsList__skillsList,.experienceList__experienceList,.otherAdvantagesList__otherAdvantagesList,.interestsList__interestsList    {
+            @include responsiveMiddleWidthRight;
+        }
+
+        .skillsList__item {
+            @include responsiveMiddleWidth;
+        } 
+    
+        .skillsList__item--notMain {
+            @include responsiveMiddleWidthRight;
+        } 
+    
+        .skillsList__itemLine--first,.experienceList__itemLine--first,.otherAdvantagesList__itemLine--first,.interestsList__itemLine--first{
+            @include responsiveMiddleWidthRight;
+        }
+    
+        .skillsList__itemLine--notFirst,.experienceList__itemLine--notFirst,.otherAdvantagesList__itemLine--notFirst,.interestsList__itemLine--notFirst {
+            @include responsiveMiddleWidthRight;
+            margin-top: $itemLineReduceMargin;
+        }
+    
+        .skillsList__item--first,.experienceList__item--first,.otherAdvantagesList__item--first,.interestsList__item--first {
+            @include responsiveMiddleWidthRight;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .skillsList,.experienceList,.otherAdvantagesList,.interestsList {
+        line-height: 20px;
+        .skillsList__skillsList,.experienceList__experienceList,.otherAdvantagesList__otherAdvantagesList,.interestsList__interestsList {
+        width: $minWidth;
+        }
+    
+        .skillsList__itemLine--first,.experienceList__itemLine--first,.otherAdvantagesList__itemLine--first,.interestsList__itemLine--first{
+        width: $minWidth;
+        }
+    
+        .skillsList__itemLine--notFirst,.experienceList__itemLine--notFirst,.otherAdvantagesList__itemLine--notFirst,.interestsList__itemLine--notFirst {
+        width: $minWidth;
+        margin-top: $itemLineReduceMargin;
+        }
+    }
+
+    p {
+        width: 480px;
+    }
+
+}
+
+::ng-deep.mdc-list-item__primary-text {
+    @include itemLinesBreakLine;
+}
+
+::ng-deep.mdc-list-item__secondary-text {
+    @include itemLinesBreakLine;
+}
+
+a{
+    color: $mainPageColor;
+}

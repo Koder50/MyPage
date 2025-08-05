@@ -1,0 +1,123 @@
+$mainMarginBottom: 40px;
+$normalFontSize: 18px;
+$hMainColor: black;
+$mainPageColor: #3f51b5;
+$mainPaddingLeft: 40px;
+$slopeWidth: 740px;
+@mixin mainPaddingLeft {
+    padding-left: $mainPaddingLeft;
+}
+@mixin mainPageColor {
+    color: $mainPageColor;
+}
+@mixin mainPaddingLeftAndPageColor {
+    @include mainPageColor;
+    @include mainPaddingLeft;
+}
+
+h1 {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    color: $hMainColor;
+    border: 0px;
+    margin-top: 20px;
+    margin-bottom: $mainMarginBottom;
+}
+
+p {
+    line-height: 24px;
+    font-size: $normalFontSize;
+    @include mainPaddingLeftAndPageColor;
+    color: $hMainColor;
+    padding-top: 40px;
+}
+
+.isVisible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+}
+
+
+.fadeInSection {
+    opacity: 0;
+    transform: translateX(-20vw);
+    visibility: visible;
+}
+
+
+.content__slope{
+    width: $slopeWidth;
+    margin: 20px calc( (100% - $slopeWidth) / 2) 20px calc( (100% - $slopeWidth) / 2);
+}
+
+.mat-elevation-z8, .mat-mdc-elevation-specific.mat-elevation-z8 {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+}
+
+.mat-mdc-cell {
+
+    border-bottom-style: hidden; 
+}
+
+.content__nature {
+    margin: 20px;
+}
+
+.mdc-data-table__cell, .mdc-data-table__header-cell {
+    padding: 0; 
+}
+
+.mdc-data-table__row:last-child .mat-mdc-cell {
+    border-bottom: none;
+    padding: 0px 10px 0px 10px;
+}
+
+.mdc-data-table__table {
+    min-width: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+:host ::ng-deep .miniature {
+    opacity :0.3;
+    display: inline-block;
+}
+
+:host ::ng-deep .miniature:hover {
+    opacity: 1.0;
+    display: inline-block;
+}
+
+@media screen and (max-width: 959px) and (min-width: 600px) {  
+
+    .content__slope{
+        width: calc( 100% - 220px );
+        margin: 20px 110px 20px 110px;
+        overflow: hidden;
+    }
+
+    .content__nature {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .content__slope{
+        width: 380px;
+        margin: 20px 110px 20px 110px;
+        overflow: hidden;
+    }
+
+    .content__nature {
+        text-align: center;
+    }
+}
+
+    

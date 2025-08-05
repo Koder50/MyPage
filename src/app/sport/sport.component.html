@@ -1,0 +1,114 @@
+<div class="content" id="content" style="overflow: hidden;">
+
+  <div class="sport">
+    <h1 inViewport (inViewportAction)="checkElementOnViewSport($event,0)" [ngClass]="{fadeInSection: !this.isVisibleSport[0], isVisible: this.isVisibleSport[0]}">{{sport[0][0]}}</h1>
+
+    <p inViewport (inViewportAction)="checkElementOnViewSport($event,0)" [ngClass]="{fadeInSection: !this.isVisibleSport[0], isVisible: this.isVisibleSport[0]}" style="margin-left: -40px">{{sport[0][1]}}</p>
+  </div>
+  <div class="football" id="football">
+    <h2 inViewport (inViewportAction)="checkElementOnViewDisciplines($event,0)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[0], isVisible: this.isVisibleDisciplines[0]}"><mat-icon class="content__icon--space">check_circle</mat-icon>{{disciplines[0][0]}}</h2>
+
+    <img src="assets/sport_graphics/piłka-nożna.png" class="content__ball" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,1)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[1], isVisibleBall: this.isVisibleDisciplines[1]}">
+
+    <p inViewport (inViewportAction)="checkElementOnViewDisciplines($event,2)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[2], isVisibleBlue: this.isVisibleDisciplines[2]}" [innerHtml]="disciplines[0][1]"></p>
+
+    <img src="assets/sport_graphics/stadion_piłkarski.jpg" class="content__stadium" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,3)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[3], isVisibleStadium: this.isVisibleDisciplines[3]}">
+  </div>  
+  
+  <div class="skiing" id="skiing">
+    <h2 inViewport (inViewportAction)="checkElementOnViewDisciplines($event,4)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[4], isVisible: this.isVisibleDisciplines[4]}"><mat-icon class="content__icon--space">check_circle</mat-icon>{{disciplines[1][0]}}</h2>
+
+    <img src="assets/sport_graphics/narty.jpg" class="content__skiing" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,5)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[5], isVisibleSkiing: this.isVisibleDisciplines[5]}">
+
+    <p inViewport (inViewportAction)="checkElementOnViewDisciplines($event,6)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[6], isVisibleBlue: this.isVisibleDisciplines[6]}" [innerHtml]="disciplines[1][1]"></p>
+
+    <img src="assets/sport_graphics/stok_narciarski.jpg" class="content__slope" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,7)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[7], isVisibleSlope: this.isVisibleDisciplines[7]}">
+  </div> 
+
+  <div class="tennis" id="tennis">
+    <h2 inViewport (inViewportAction)="checkElementOnViewDisciplines($event,8)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[8], isVisible: this.isVisibleDisciplines[8]}"><mat-icon class="content__icon--space">check_circle</mat-icon>{{disciplines[2][0]}}</h2>
+
+    <img src="assets/sport_graphics/tenis_ziemny.png" class="content__tennis" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,9)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[9], isVisibleTennis: this.isVisibleDisciplines[9]}">
+
+    <p inViewport (inViewportAction)="checkElementOnViewDisciplines($event,10)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[10], isVisibleBlue: this.isVisibleDisciplines[10]}">{{disciplines[2][1]}}</p>
+
+    <img src="assets/sport_graphics/kort_tenisowy.jpg" class="content__court" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,11)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[11], isVisibleSlope: this.isVisibleDisciplines[11]}">
+  
+  </div>
+
+  <div class="swimming" id="swimming">
+    <h2 inViewport (inViewportAction)="checkElementOnViewDisciplines($event,12)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[12], isVisible: this.isVisibleDisciplines[12]}"><mat-icon class="content__icon--space">check_circle</mat-icon>{{disciplines[3][0]}}</h2>
+
+    <img src="assets/sport_graphics/kraul.png" class="content__swimming" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,13)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[13], isVisibleSwimming: this.isVisibleDisciplines[13]}">
+
+    <p inViewport (inViewportAction)="checkElementOnViewDisciplines($event,14)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[14], isVisibleBlue: this.isVisibleDisciplines[14]}">{{disciplines[3][1]}}</p>
+
+    <img src="assets/sport_graphics/basen.png" class="content__pool" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,15)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[15], isVisiblePool: this.isVisibleDisciplines[15]}">
+  </div>
+
+  <div class="windsurfing" id="windsurfing">
+    <h2 inViewport (inViewportAction)="checkElementOnViewDisciplines($event,16)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[16], isVisible: this.isVisibleDisciplines[16]}"><mat-icon class="content__icon--space">check_circle</mat-icon>{{disciplines[4][0]}}</h2>
+
+    <img src="assets/sport_graphics/windsurfing.jpg" class="content__windsurfing" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,17)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[17], isVisibleWindsurfing: this.isVisibleDisciplines[17]}">
+
+    <p inViewport (inViewportAction)="checkElementOnViewDisciplines($event,18)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[18], isVisibleBlue: this.isVisibleDisciplines[18]}" [innerHtml]="disciplines[4][1]"></p>
+
+    <img src="assets/sport_graphics/windsurfing_morze.jpg" class="content__sea" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,19)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[19], isVisibleSea: this.isVisibleDisciplines[19]}">
+  </div>
+
+  <div class="cycling" id="cycling">
+    <h2 inViewport (inViewportAction)="checkElementOnViewDisciplines($event,20)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[20], isVisible: this.isVisibleDisciplines[20]}"><mat-icon class="content__icon--space">check_circle</mat-icon>{{disciplines[5][0]}}</h2>
+
+    <img src="assets/sport_graphics/rowerzysta.jpg" class="content__cycling" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,21)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[21], isVisibleCycling: this.isVisibleDisciplines[21]}">
+
+    <p inViewport (inViewportAction)="checkElementOnViewDisciplines($event,22)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[22], isVisibleBlue: this.isVisibleDisciplines[22]}" [innerHtml]="disciplines[5][1]"></p>
+
+    <img src="assets/sport_graphics/wyścig_kolarski.jpg" class="content__race" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,23)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[23], isVisibleRace: this.isVisibleDisciplines[23]}">
+  </div>
+
+  <div class="basketball" id="basketball">
+    <h2 inViewport (inViewportAction)="checkElementOnViewDisciplines($event,24)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[24], isVisible: this.isVisibleDisciplines[24]}"><mat-icon class="content__icon--space">check_circle</mat-icon>{{disciplines[6][0]}}</h2>
+
+    <img src="assets/sport_graphics/kosz_i_piłka.jpg" class="content__basketball" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,25)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[25], isVisibleBasketball: this.isVisibleDisciplines[25]}">
+
+    <p inViewport (inViewportAction)="checkElementOnViewDisciplines($event,26)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[26], isVisibleBlue: this.isVisibleDisciplines[26]}" [innerHtml]="disciplines[6][1]"></p>
+
+    <img src="assets/sport_graphics/koszykówka.jpg" class="content__arena" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,27)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[27], isVisibleArena: this.isVisibleDisciplines[27]}">
+  </div>
+
+  <div class="volleyball" id="volleyball">
+    <h2 inViewport (inViewportAction)="checkElementOnViewDisciplines($event,28)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[28], isVisible: this.isVisibleDisciplines[28]}"><mat-icon class="content__icon--space">check_circle</mat-icon>{{disciplines[7][0]}}</h2>
+
+    <img src="assets/sport_graphics/siatka_piłka.jpg" class="content__volleyball" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,29)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[29], isVisibleVolleyball: this.isVisibleDisciplines[29]}">
+
+    <p inViewport (inViewportAction)="checkElementOnViewDisciplines($event,30)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[30], isVisibleBlue: this.isVisibleDisciplines[30]}" [innerHtml]="disciplines[7][1]"></p>
+    
+    <img src="assets/sport_graphics/siatkówka.jpg" class="content__volleyballArena" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,31)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[31], isVisibleVolleyballArena: this.isVisibleDisciplines[31]}">
+  </div>
+
+  <div class="chess" id="chess">
+    <h2 inViewport (inViewportAction)="checkElementOnViewDisciplines($event,32)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[32], isVisible: this.isVisibleDisciplines[32]}"><mat-icon class="content__icon--space">check_circle</mat-icon>{{disciplines[8][0]}}</h2>
+
+    <img src="assets/sport_graphics/szachy_figury.jpg" class="content__chess" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,33)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[33], isVisibleChess: this.isVisibleDisciplines[33]}">
+ 
+    <p inViewport (inViewportAction)="checkElementOnViewDisciplines($event,34)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[34], isVisibleBlue: this.isVisibleDisciplines[34]}" [innerHtml]="disciplines[8][1]"></p>
+  
+    <img src="assets/sport_graphics/szachy.jpg" class="content__chessBoard" loading="lazy" inViewport (inViewportAction)="checkElementOnViewDisciplines($event,35)" [ngClass]="{fadeInSection: !this.isVisibleDisciplines[35], isVisibleChessBoard: this.isVisibleDisciplines[35]}">
+  </div>
+
+  <div class="linki">
+    <mat-list role="list" class="list">
+      <mat-list-item role="listitem" class="list_listItem"><a href="#content" class="list__link--styles">Sport</a></mat-list-item>
+      <mat-list-item role="listitem" class="list_listItem"><a href="#football" class="list__link--styles">Piłka nożna</a></mat-list-item>
+      <mat-list-item role="listitem" class="list_listItem"><a href="#skiing" class="list__link--styles">Narty</a></mat-list-item>
+      <mat-list-item role="listitem" class="list_listItem"><a href="#tennis" class="list__link--styles">Tenis ziemny</a></mat-list-item>
+      <mat-list-item role="listitem" class="list_listItem"><a href="#swimming" class="list__link--styles">Pływanie</a></mat-list-item>
+      <mat-list-item role="listitem" class="list_listItem"><a href="#windsurfing" class="list__link--styles">Windsurfing</a></mat-list-item>
+      <mat-list-item role="listitem" class="list_listItem"><a href="#cycling" class="list__link--styles">Kolarstwo</a></mat-list-item>
+      <mat-list-item role="listitem" class="list_listItem"><a href="#basketball" class="list__link--styles">Koszykówka</a></mat-list-item>
+      <mat-list-item role="listitem" class="list_listItem"><a href="#volleyball" class="list__link--styles">Siatkówka</a></mat-list-item>
+      <mat-list-item role="listitem" class="list_listItem"><a href="#chess" class="list__link--styles">Szachy</a></mat-list-item>
+    </mat-list>
+  </div>
+
+</div>

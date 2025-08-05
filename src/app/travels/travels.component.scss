@@ -1,0 +1,218 @@
+$mainMarginBottom: 40px;
+$normalFontSize: 18px;
+
+$hMainColor: black;
+$mainPageColor: #3f51b5;
+
+$mainPaddingLeft: 80px;
+
+$ballWidth: 120px;
+$skiingWidth: 200px;
+$tennisWidth: 250px;
+$swimmingWidth: 305px;
+$windsurfingWidth: 350px;
+$cyclingWidth: 300px;
+$basketballWidth: 150px;
+$volleyballWidth: 124px;
+$mapWidth: 700px;
+$mapLabelWidth: 150px;
+
+@mixin mainPaddingLeft {
+    padding-left: $mainPaddingLeft;
+}
+@mixin mainPageColor {
+    color: $mainPageColor;
+}
+@mixin mainPaddingLeftAndPageColor {
+    @include mainPageColor;
+    @include mainPaddingLeft;
+}
+
+@mixin mainListIcon {
+    margin-right: 20px;
+    height: 24px;
+}
+
+@mixin mainListLabel {
+    display: inline-flex;
+    vertical-align: super;
+}
+
+h1 {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    color: $hMainColor;
+    border: 0px;
+    margin-top: 20px;
+    margin-bottom: $mainMarginBottom;
+}
+
+.content__icon--space {
+    margin-right: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    text-align: left;
+    margin-left: 40px;
+    color: $hMainColor;
+    border: 0px;
+    margin-top: 40px;
+    margin-bottom: $mainMarginBottom;
+    width: 100%;
+    display: block;
+}
+
+p {
+    line-height: 24px;
+    font-size: $normalFontSize;
+    @include mainPaddingLeftAndPageColor;
+    color: $hMainColor;
+    padding-top: 40px;
+}
+
+.isVisible,.isVisibleBlue {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+}
+
+.isVisibleBlue {
+    color: $mainPageColor;
+}
+
+.fadeInSection {
+    opacity: 0;
+    transform: translateY(-20vh);
+    visibility: visible;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+
+    .list__listItem{
+        p{
+            padding-left: 65px;
+            height: auto;
+        }
+
+        .list__icon {
+            @include mainListIcon;
+        }
+
+        .list__label {
+            @include mainListLabel;
+            
+        }
+
+    }
+
+    .list__listItem--styles{
+        padding-left: 105px;
+
+        .list__icon {
+            @include mainListIcon;
+        }
+
+        .list__label {
+            @include mainListLabel;
+            text-decoration: underline;
+        }
+    }
+    
+    .list__listItem--stylesCity{
+        padding-left: 145px;
+
+        .list__icon {
+            @include mainListIcon;
+            color: $mainPageColor !important;
+        }
+
+        .list__label {
+            @include mainListLabel;
+            color: $mainPageColor !important;
+            
+        }
+    }
+    
+}
+
+
+.content__map {
+    height: $mapWidth;
+    width: 700px;
+    margin: 20px calc( (100% - $mapWidth) / 2) 20px calc( (100% - $mapWidth) / 2);
+}
+
+.content__label {
+    display: flex;
+    width: $mapLabelWidth;
+    margin: 0px calc( (100% - $mapLabelWidth) / 2) 40px calc( (100% - $mapLabelWidth) / 2);
+    font-size: $normalFontSize;
+    color: $hMainColor;
+}
+
+
+
+.mat-elevation-z8, .mat-mdc-elevation-specific.mat-elevation-z8 {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+}
+
+.mat-mdc-cell {
+
+    border-bottom-style: hidden; 
+}
+
+:host::ng-deep.signature {
+    color: $hMainColor !important;
+    text-align: center; 
+    margin: 20px 0 20px 0;
+}
+
+:host::ng-deep.photo {
+    margin: 20px 40px 20px 40px;
+}
+
+:host::ng-deep.photoHorizontal {
+    margin: 20px 90px 20px 90px;
+}
+
+@media screen and (max-width: 959px) and (min-width: 600px) {
+    .content__map {
+        width: calc( 100% - 160px );
+        height: 700px;
+        margin: 20px 100px 20px 60px;
+    }
+
+    .mat-column-photo1, .mat-column-photo2 {
+        display: inline-block;
+    }
+
+    .center {
+        text-align: center;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .content__map {
+        width: calc( 100% - 160px );
+        height: 700px;
+        margin: 20px 100px 20px 60px;
+    }
+
+    .mat-column-photo1, .mat-column-photo2 {
+        display: inline-block;
+    }
+
+    .center {
+        text-align: center;
+    }
+}
+
+

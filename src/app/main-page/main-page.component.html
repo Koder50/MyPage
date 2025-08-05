@@ -1,0 +1,142 @@
+<div class="content" style="overflow: hidden;">
+
+  <h1 inViewport (inViewportAction)="checkElementOnView0($event)" [ngClass]="{fadeInSection: !this.isVisible[0], isVisible: this.isVisible[0]}">Curriculum Vitae</h1>
+
+  <h2 inViewport (inViewportAction)="checkElementOnView0($event)" [ngClass]="{fadeInSection: !this.isVisible[0], isVisible: this.isVisible[0]}">Dane osobowe</h2>
+
+  <table mat-table [dataSource]="dataSource" class="tablePersonalData" inViewport (inViewportAction)="checkElementOnView0($event)" [ngClass]="{fadeInSection: !this.isVisible[0], isVisible: this.isVisible[0]}">
+      
+    <ng-container matColumnDef="definition">
+      <th mat-header-cell *matHeaderCellDef class="tablePersonalData__tableCell tablePersonalData__tableCell--styles">Rodzaj danych</th>
+      <td mat-cell *matCellDef="let element" class="tablePersonalData__tableCell tablePersonalData__tableCell--styles">{{element.definition}}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="value">
+      <th mat-header-cell *matHeaderCellDef class="tablePersonalData__tableCell tablePersonalData__tableCell--styles">Dane</th>
+
+      <td mat-cell *matCellDef="let element" class="tablePersonalData__tableCell tablePersonalData__tableCell--styles">
+        <ng-container *ngIf="element.value=='kgoralczyk@gmail.com'"><strong><a href="mailto:kgoralczyk@gmail.com" style="text-decoration: none">{{element.value}}</a></strong></ng-container>
+        <ng-container *ngIf="element.value!='kgoralczyk@gmail.com'"><strong>{{element.value}}</strong></ng-container>
+      </td>
+    </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" class="tablePersonalData__tableRow tablePersonalData__tableRow--styles"></tr>
+    <tr mat-row *matRowDef="let row; let even = even; columns: displayedColumns;" [ngClass]="{even: even}" class="tablePersonalData__tableRow tablePersonalData__tableRow--styles"></tr>
+  </table>
+
+  <h2 inViewport (inViewportAction)="checkElementOnView1($event)" [ngClass]="{fadeInSection: !this.isVisible[1], isVisible: this.isVisible[1]}">Wykształcenie</h2>
+
+  <p inViewport (inViewportAction)="checkElementOnView1($event)" [ngClass]="{fadeInSection: !this.isVisible[1], isVisible: this.isVisible[1]}"><strong>2008-2012</strong>    Politechnika Gdańska, Wydział Elektroniki, Telekomunikacji i Informatyki, kierunek Informatyka, inżynier.</p>
+  <p inViewport (inViewportAction)="checkElementOnView1($event)" [ngClass]="{fadeInSection: !this.isVisible[1], isVisible: this.isVisible[1]}"><strong>2005-2008</strong>    III Liceum Ogólnokształcące w Gdyni, klasa o profilu matematyczno-fizyczno-informatycznym.</p>
+
+  <h2 inViewport (inViewportAction)="checkElementOnView2($event)" [ngClass]="{fadeInSection: !this.isVisible[2], isVisible: this.isVisible[2]}">Umiejętności techniczne</h2>
+
+  <mat-list class="skillsList" inViewport (inViewportAction)="checkElementOnView2($event)" [ngClass]="{fadeInSection: !this.isVisible[2], isVisible: this.isVisible[2]}">
+      <mat-list-item class="skillsList__item">
+        <mat-icon matListItemIcon class="skillsList__icon">check_circle</mat-icon>
+        Znajomość języka programowania C++:
+      </mat-list-item>
+      <mat-list class="skillsList skillsList__skillsList">
+        <mat-list-item class="skillsList__item--notMain"><mat-icon matListItemIcon class="skillsList__icon">check_circle_outline</mat-icon>programowanie funkcyjne ( rozwiazane 256 zadań na Spoju ),</mat-list-item>
+        <mat-list-item class="skillsList__item--notMain"><mat-icon matListItemIcon class="skillsList__icon">check_circle_outline</mat-icon>programowanie obiektowe ( teoria oraz podstawowe zadania praktyczne ),</mat-list-item>
+      </mat-list>
+      <mat-list-item class="skillsList__item"><mat-icon matListItemIcon class="skillsList__icon">check_circle</mat-icon>Znajomość środowiska programistycznego ( Visual Studio 2019,Visual Studio Code ),</mat-list-item>
+      <mat-list-item class="skillsList__item"><mat-icon matListItemIcon class="skillsList__icon">check_circle</mat-icon>Systemy operacyjne: Windows ( 7, 10, 11 ),</mat-list-item>
+      <mat-list-item class="skillsList__item"><mat-icon matListItemIcon class="skillsList__icon">check_circle</mat-icon>
+        <h3 matListItemTitle style="height: 0px">Znajomość</h3>
+        <span matListItemLine class="skillsList__itemLine--first">Znajomość technologii wykorzystywanych w aplikacjach internetowych ( HTML, CSS, JAVASCRIPT, JQUERY,</span>
+        <span matListItemLine class="skillsList__itemLine--notFirst">Ajax, Angular, Bootstrap, Typescript, MVC, wypróbowanie Cordova ( strona jako aplikacja np.na tablet ),</span>
+        <span matListItemLine class="skillsList__itemLine--notFirst">Electron ( strona jako aplikacja np. na Windows ) ).</span>
+        <span matListItemLine class="skillsList__itemLine--notFirst"></span>  
+      </mat-list-item>
+      <mat-list-item class="skillsList__item"><mat-icon matListItemIcon class="skillsList__icon">check_circle</mat-icon>
+        <h3 matListItemTitle style="height: 0px">Styczność</h3>
+        <span matListItemLine class="skillsList__itemLine--first">Styczność w pracy oraz przerobione kursy na Udemy z następującymi technologiami wykorzystywanymi </span>
+        <span matListItemLine class="skillsList__itemLine--notFirst">w aplikacjach internetowych ( Git, Angular Material, RXJS, REST, JSON, Swagger, SCSS, Form Control, </span>
+        <span matListItemLine class="skillsList__itemLine--notFirst">FLEX ).</span>
+        <span matListItemLine class="skillsList__itemLine--notFirst"></span>
+      </mat-list-item>
+  </mat-list>
+
+  <h2 inViewport (inViewportAction)="checkElementOnView3($event)" [ngClass]="{fadeInSection: !this.isVisible[3], isVisible: this.isVisible[3]}">Doświadczenie</h2>
+
+  <mat-list class="experienceList" inViewport (inViewportAction)="checkElementOnView3($event)" [ngClass]="{fadeInSection: !this.isVisible[3], isVisible: this.isVisible[3]}">
+      <mat-list-item class="experienceList__item">
+        <mat-icon matListItemIcon class="experienceList__icon">check_circle</mat-icon>
+        <h3 matListItemTitle style="height: 0px">Udemy</h3>
+        <span matListItemLine class="experienceList__itemLine--first"><strong>czerwiec 2023r.- dziś</strong> przerabianie kursów na Udemy ( Angular Material, RXJS, REST, JSON, </span>
+        <span matListItemLine class="experienceList__itemLine--notFirst">Swagger, SCSS, Form Control, FLEX ) oraz projekty własne</span>
+        <span matListItemLine class="experienceList__itemLine--notFirst"></span>
+      </mat-list-item>
+      <mat-list-item class="experienceList__item">
+        <mat-icon matListItemIcon class="experienceList__icon">check_circle</mat-icon>
+        <h3 matListItemTitle style="height: 0px">Ekoncept</h3>
+        <span matListItemLine class="experienceList__itemLine--first"><strong>24 marzec 2022r.-31 maj 2023r.</strong> praca w EKONCEPT Grzegorz Krzyżanowski jako Junior/Mid Front End</span>
+        <span matListItemLine class="experienceList__itemLine--notFirst">Developer</span>
+        <span matListItemLine class="experienceList__itemLine--notFirst"></span>
+      </mat-list-item>
+      <mat-list-item class="experienceList__item">
+        <mat-icon matListItemIcon class="experienceList__icon">check_circle</mat-icon>
+        <h3 matListItemTitle style="height: 0px">Ekoncept</h3>
+        <span matListItemLine class="experienceList__itemLine--first"><strong>listopad 2019r.-23 marzec 2022r.</strong> samodzielna nauka w domu m.in. odświeżanie oraz rozszerzanie</span>
+        <span matListItemLine class="experienceList__itemLine--notFirst">umiejętności, przygotowanie na stanowisko front end developer/front end programista/ Angular developer/</span>
+        <span matListItemLine class="experienceList__itemLine--notFirst">Angular programista</span>
+        <span matListItemLine class="experienceList__itemLine--notFirst"></span>
+      </mat-list-item>
+      <mat-list-item class="experienceList__item">
+        <mat-icon matListItemIcon class="experienceList__icon">check_circle</mat-icon>
+        <h3 matListItemTitle style="height: 0px">Rego</h3>
+        <span matListItemLine class="experienceList__itemLine--first"><strong>kwiecień 2013r.-grudzień 2018r.</strong> Rego Gdynia, umowa zlecenie; nadzorowanie nad wynajmem mieszkań</span>
+        <span matListItemLine class="experienceList__itemLine--notFirst">oraz lokali użytkowych</span>
+        <span matListItemLine class="experienceList__itemLine--notFirst"></span>
+      </mat-list-item>
+      <mat-list-item class="experienceList__item">
+        <mat-icon matListItemIcon class="experienceList__icon">check_circle</mat-icon>
+        <h3 matListItemTitle style="height: 0px">Intel</h3>
+        <span matListItemLine class="experienceList__itemLine--first"><strong>1 sierpnia 2011r.-21 października 2011r.</strong> Intel Technology Poland Gdańsk, 3 / 5 etatu, Stażysta Inżynier</span>
+        <span matListItemLine class="experienceList__itemLine--notFirst">ds.Oprogramowania</span>
+        <span matListItemLine class="experienceList__itemLine--notFirst"></span>
+      </mat-list-item>
+      <mat-list-item class="experienceList__item">
+        <h3 matListItemTitle style="height: 0px">projekty</h3>
+        <span matListItemLine class="experienceList__itemLine--first">7 semestrów na uczelni oraz projekty własne ( na spoj.pl ), strona o sobie samym, estetyczny i z dodatkowymi</span>
+        <span matListItemLine class="experienceList__itemLine--notFirst">funkcjami Paint w Angular z Canvas oraz wiele innych.</span>
+        <span matListItemLine class="experienceList__itemLine--notFirst"></span>
+      </mat-list-item>
+  </mat-list>
+
+  <h2 inViewport (inViewportAction)="checkElementOnView4($event)" [ngClass]="{fadeInSection: !this.isVisible[4], isVisible: this.isVisible[4]}">Inne atuty</h2>
+
+  <mat-list class="otherAdvantagesList" inViewport (inViewportAction)="checkElementOnView4($event)" [ngClass]="{fadeInSection: !this.isVisible[4], isVisible: this.isVisible[4]}">
+        <mat-list-item class="otherAdvantagesList__item">
+          <mat-icon matListItemIcon class="otherAdvantagesList__icon">check_circle</mat-icon>
+          <h3 matListItemTitle style="height: 0px">angielski</h3>
+          <span matListItemLine class="otherAdvantagesList__itemLine--first">Język angielski - Certificate In Advanced English(CAE), University of Cambridge Esol Examinations;</span>
+          <span matListItemLine class="otherAdvantagesList__itemLine--notFirst">wakacyjny kurs językowy w Oxfordzie,</span>
+          <span matListItemLine class="otherAdvantagesList__itemLine--notFirst"></span>
+        </mat-list-item>
+        <mat-list-item class="otherAdvantagesList__item--first"><mat-icon matListItemIcon class="otherAdvantagesList__icon">check_circle</mat-icon>Język niemiecki - polska matura podstawowa zdana na 94%,</mat-list-item>
+        <mat-list-item class="otherAdvantagesList__item"><mat-icon matListItemIcon class="otherAdvantagesList__icon">check_circle</mat-icon>Prawo jazdy kat.B,</mat-list-item>
+        <mat-list-item class="otherAdvantagesList__item"><mat-icon matListItemIcon class="otherAdvantagesList__icon">check_circle</mat-icon>Gospodarz klasy przez wiele lat w szkole podstawowej, gimnazjum oraz liceum,</mat-list-item>
+        <mat-list-item class="otherAdvantagesList__item"><mat-icon matListItemIcon class="otherAdvantagesList__icon">check_circle</mat-icon>Umiejętność pracy w zespole,</mat-list-item>
+        <mat-list-item class="otherAdvantagesList__item"><mat-icon matListItemIcon class="otherAdvantagesList__icon">check_circle</mat-icon>Chęć zdobywania nowej wiedzy i nowych doświadczeń.</mat-list-item>
+  </mat-list>
+      
+  <h2 inViewport (inViewportAction)="checkElementOnView5($event)" [ngClass]="{fadeInSection: !this.isVisible[5], isVisible: this.isVisible[5]}">Zainteresowania</h2>
+
+  <mat-list class="interestsList" inViewport (inViewportAction)="checkElementOnView5($event)" [ngClass]="{fadeInSection: !this.isVisible[5], isVisible: this.isVisible[5]}">
+        <mat-list-item class="interestsList__item">
+          <mat-icon matListItemIcon class="interestsList__icon">check_circle</mat-icon>
+          <h3 matListItemTitle style="height: 0px">sport</h3>
+          <span matListItemLine class="interestsList__itemLine--first">Sport: piłka nożna, narty, tenis ziemny, pływanie, windsurfing, jazda na rowerze, koszykówka, siatkówka,</span>
+          <span matListItemLine class="interestsList__itemLine--notFirst">szachy;</span>
+          <span matListItemLine class="interestsList__itemLine--notFirst">ponadto zainteresowanie tymi dyscyplinami od wielu lat, obecnie głównie piłka nożna ( teoria, transfery,</span>
+          <span matListItemLine class="interestsList__itemLine--notFirst">drużyny, sportowcy, aktualności, składy i wszelkie inne wydarzenia ),</span>
+          <span matListItemLine class="interestsList__itemLine--notFirst"></span>
+        </mat-list-item>
+        <mat-list-item class="interestsList__item--first"><mat-icon matListItemIcon class="interestsList__icon">check_circle</mat-icon>Podróże: Europa, Afryka, Azja,</mat-list-item>
+        <mat-list-item class="interestsList__item"><mat-icon matListItemIcon class="interestsList__icon">check_circle</mat-icon>Słuchanie muzyki,</mat-list-item>
+        <mat-list-item class="interestsList__item"><mat-icon matListItemIcon class="interestsList__icon">check_circle</mat-icon>Czytanie książek,</mat-list-item>
+        <mat-list-item class="interestsList__item"><mat-icon matListItemIcon class="interestsList__icon">check_circle</mat-icon>Kontakt z przyrodą.</mat-list-item>
+  </mat-list>
+</div>

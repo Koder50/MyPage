@@ -1,0 +1,15 @@
+$standardBackgroundColor: #ffffff;
+$standardWidth: 100%;
+
+body {
+    color: #4800ff;
+    background-color: $standardBackgroundColor;
+    //font-family: Arial, Verdana, sans-serif;
+    line-height: 1.6em;
+    margin: 0px;
+
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 24px;}
