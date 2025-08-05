@@ -1,6 +1,10 @@
 # MyPage
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
+# Technologies
+
+This project used: HTML,SCSS,Typescript, Angular Material
+
 ## Development server
 
 If there is no node_modules folder, run 'npm install' first.
