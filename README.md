@@ -11,7 +11,7 @@ This project was last modified in July 2023, so on Main Page and Programming pag
 
 ## Development server
 
-If there is no node_modules folder, run 'npm install' first.
+If there is no node_modules folder, run `npm install` first.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
