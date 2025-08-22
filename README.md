@@ -18,3 +18,12 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Challenges
+
+1. Use correct Angular Material controls
+2. Make content appear on hover(every page has different direction)
+3. Use icons
+4. Prepare valuable content
+5. Use map
+6. Make galleries
