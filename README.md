@@ -8,6 +8,7 @@ HTML, <br>
 SCSS,<br>
 BEM,<br>
 Typescript,<br>
+Angular, <br>
 Angular Material
 
 ## Updating
