@@ -3,7 +3,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Technologies
 
-This project used: HTML,SCSS,BEM,Typescript,Angular Material
+This project used: 
+HTML,
+SCSS,
+BEM,
+Typescript,
+Angular Material
 
 ## Updating
 
