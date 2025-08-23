@@ -4,10 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Technologies
 
 This project used: 
-HTML,
-SCSS,
-BEM,
-Typescript,
+HTML, <br>
+SCSS,<br>
+BEM,<br>
+Typescript,<br>
 Angular Material
 
 ## Updating
