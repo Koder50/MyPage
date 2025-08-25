@@ -6,11 +6,30 @@ It includes interactive sections, galleries, and custom UI built with Angular Ma
 
 https://karolgoralczyk.pl/
 
+## Features
+- Interactive pages with hover effects (different animations per page)  
+-  Integrated icons and galleries  
+-  Embedded map component  
+-  Well-structured UI using Angular Material components  
+-  CV and Programming section 
+
+## Table of Contents
+- [MyPage](#MyPage) 
+- [Live Demo](#live-demo) 
+- [Features](#Features) 
+- [Table of Contents](#table-of-contents) 
+- [Screenshots](#Screenshots) 
+- [Technologies](#Technologies) 
+- [Installation and Usage](#installation-and-usage) 
+- [Project Status](#project-status) 
+- [Challenges](#Challenges) 
+
+
 ## Screenshots
 
-<img width="1912" height="962" alt="myPage1" src="https://github.com/user-attachments/assets/97db600c-bc9d-4f16-a836-f741f19d48ae" /><br>
-<img width="1912" height="967" alt="myPage2" src="https://github.com/user-attachments/assets/7108f807-3b35-4d07-b196-247cd1b73e4d" /><br>
-<img width="1913" height="966" alt="myPage3" src="https://github.com/user-attachments/assets/cf44cc05-c6df-4a40-b2a5-2f56939af899" /><br>
+<img width="1912" height="962" alt="myPage1" src="https://github.com/user-attachments/assets/97db600c-bc9d-4f16-a836-f741f19d48ae" />
+<img width="1912" height="967" alt="myPage2" src="https://github.com/user-attachments/assets/7108f807-3b35-4d07-b196-247cd1b73e4d" />
+<img width="1913" height="966" alt="myPage3" src="https://github.com/user-attachments/assets/cf44cc05-c6df-4a40-b2a5-2f56939af899" />
 <img width="1917" height="965" alt="myPage4" src="https://github.com/user-attachments/assets/bf3b9acc-d6a4-4c06-8c39-f119ef6566f5" />
 
 ## Technologies
@@ -20,14 +39,7 @@ https://karolgoralczyk.pl/
 - BEM
 - Typescript
 - Angular
-- Angular Material
-
-## Features
-- Interactive pages with hover effects (different animations per page)  
--  Integrated icons and galleries  
--  Embedded map component  
--  Well-structured UI using Angular Material components  
--  CV and Programming section  
+- Angular Material 
 
 ## Installation and Usage
 
@@ -39,10 +51,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Project Status
 
-Last updated: August 2023
-
-The Main Page and Programming Page contain more details than the CV,
-but the CV is always kept up to date.
+The Main Page and Programming Page contain more details than the CV or Linkedin, but were last updated August 2023.
+CV and Linkedin are always kept up to date.
 
 ## Challenges
 
