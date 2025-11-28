@@ -7,7 +7,6 @@ export interface PersonalData {
 
 const ELEMENT_DATA: PersonalData[] = [
   {definition: "Imię i nazwisko:",value: "Karol Góralczyk"},
-  {definition: "Data urodzenia:",value: "24 maja 1989"},
   {definition: "Miejsce urodzenia:",value: "Gdańsk"},
 ];
 
