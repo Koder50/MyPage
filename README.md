@@ -38,7 +38,8 @@ https://karolgoralczyk.pl/
 - BEM
 - Typescript
 - Angular
-- Angular Material 
+- Angular Material
+- Flex
 
 ## Installation and Usage
 
